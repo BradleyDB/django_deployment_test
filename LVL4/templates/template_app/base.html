@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% load my_extras %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class='navbar-brand' href="{% url 'index' %}">BRAND</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class='nav-item active'><a class='nav-link' href="{% url 'admin:index' %}">ADMIN</a></li>
+          <li class='nav-item active'><a class='nav-link' href="{% url 'template_app:other' %}">Other</a></li>
+        </ul>
+      </div>
+    </nav>
+  </br>
+
+    <div class="container">
+      {% block body_block %}
+      {% endblock %}
+    </div>
+
+  </body>
+</html>

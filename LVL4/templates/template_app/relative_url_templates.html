@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>REL</title>
+  </head>
+  <body>
+    <h1>Welcome to Relateive URLs</h1>
+<!-- the 'template_app' needs to match the app_name in the application urls.py folder -->
+<!-- the 'other' here needs to match the NAME given in the application urls.py folder  -->
+    <div class="container">
+      <ul>
+        <li><a href="{% url 'template_app:other' %}">Link to the OTHER page</a></li>
+        <!-- How to get to a page that is not within your application -->
+        <li><a href="{% url 'admin:index' %}">Link to Admin Thing</a></li>
+        <!-- How to link to the Index page -->
+        <li><a href="{% url 'index' %}">Link to Index</a></li>
+      </ul>
+    
+    </div>
+  </body>
+</html>
